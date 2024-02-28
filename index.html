@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="alert-container">
+  <label for ="alert">Alert content:</label>
+  <input onkeydown="enter_press(event)" type="text" id="alert-content" name="alert">
+  <button class="submit-btn" id="alert-btn" onclick ="click_submit()">Submit</button>
+</div>
+  <script>
+    const click_submit =()=>{
+      // console.log(document.getElementById("alert-btn"));
+      const element = document.getElementById('alert-content');
+      const text= element.value;
+      alert(text);
+    }
+    const enter_press=(event)=>{
+      const keyPress=event.keyCode;
+      if (keyPress===13) {
+        const element = document.getElementById('alert-content');
+        const text= element.value;
+        alert(text);
+      }
+    }
+
+  </script>
+</body>
+</html>
