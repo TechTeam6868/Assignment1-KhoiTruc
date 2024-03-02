@@ -6,27 +6,18 @@
   <title>Document</title>
 </head>
 <body>
-<div class="alert-container">
-  <label for ="alert">Alert content:</label>
-  <input onkeydown="enter_press(event)" type="text" id="alert-content" name="alert">
-  <button class="submit-btn" id="alert-btn" onclick ="click_submit()">Submit</button>
-</div>
-  <script>
-    const click_submit =()=>{
-      // console.log(document.getElementById("alert-btn"));
-      const element = document.getElementById('alert-content');
-      const text= element.value;
-      alert(text);
-    }
-    const enter_press=(event)=>{
-      const keyPress=event.keyCode;
-      if (keyPress===13) {
-        const element = document.getElementById('alert-content');
-        const text= element.value;
-        alert(text);
-      }
-    }
-
-  </script>
+  <p>Bài 1</p>
+  <button id="submit-btn" onclick="click_alert()">Alert!</button>
+  <p>Bài 2</p>
+  <div class="alert-container">
+    <label for ="alert">Alert content:</label>
+    <input onkeydown="enter_press(event)" type="text" id="alert-content" name="alert">
+    <button id="alert-btn" onclick ="click_submit()">Submit</button>
+  </div>
+  <p>Bài 3</p>
+  <label for ="check-box">Check this box:</label>
+  <input type="checkbox" id="check-box" name="check-box" onchange="changeCheckbox()">
+  <p id="checkbox-text" style="color:red">Bạn cần chọn vào ô</p>
+  <script src="./index.js"></script>
 </body>
 </html>
